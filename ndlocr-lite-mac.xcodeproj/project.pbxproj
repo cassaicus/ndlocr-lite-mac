@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		742ADADB89CF056E840AC846 /* Pods_ndlocr_lite_mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F76631D6C4019F07E29A18 /* Pods_ndlocr_lite_mac.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		0158B5AD2F7548C10040B0B3 /* ndlocr-lite-mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ndlocr-lite-mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29839327B728BF63EF4A1E5F /* Pods-ndlocr-lite-mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ndlocr-lite-mac.release.xcconfig"; path = "Target Support Files/Pods-ndlocr-lite-mac/Pods-ndlocr-lite-mac.release.xcconfig"; sourceTree = "<group>"; };
+		A16AA8BB77D5F79499D71321 /* Pods-ndlocr-lite-mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ndlocr-lite-mac.debug.xcconfig"; path = "Target Support Files/Pods-ndlocr-lite-mac/Pods-ndlocr-lite-mac.debug.xcconfig"; sourceTree = "<group>"; };
+		A8F76631D6C4019F07E29A18 /* Pods_ndlocr_lite_mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ndlocr_lite_mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				742ADADB89CF056E840AC846 /* Pods_ndlocr_lite_mac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +42,8 @@
 			children = (
 				0158B5AF2F7548C10040B0B3 /* ndlocr-lite-mac */,
 				0158B5AE2F7548C10040B0B3 /* Products */,
+				346C9504CC68956F53E39E65 /* Pods */,
+				A39A69D4E188846BFE6BD143 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,6 +55,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		346C9504CC68956F53E39E65 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A16AA8BB77D5F79499D71321 /* Pods-ndlocr-lite-mac.debug.xcconfig */,
+				29839327B728BF63EF4A1E5F /* Pods-ndlocr-lite-mac.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A39A69D4E188846BFE6BD143 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8F76631D6C4019F07E29A18 /* Pods_ndlocr_lite_mac.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -52,6 +79,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0158B5B82F7548C30040B0B3 /* Build configuration list for PBXNativeTarget "ndlocr-lite-mac" */;
 			buildPhases = (
+				DA3BAAB1AB9C73F824FD1D82 /* [CP] Check Pods Manifest.lock */,
 				0158B5A92F7548C10040B0B3 /* Sources */,
 				0158B5AA2F7548C10040B0B3 /* Frameworks */,
 				0158B5AB2F7548C10040B0B3 /* Resources */,
@@ -64,8 +92,6 @@
 				0158B5AF2F7548C10040B0B3 /* ndlocr-lite-mac */,
 			);
 			name = "ndlocr-lite-mac";
-			packageProductDependencies = (
-			);
 			productName = "ndlocr-lite-mac";
 			productReference = 0158B5AD2F7548C10040B0B3 /* ndlocr-lite-mac.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +139,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DA3BAAB1AB9C73F824FD1D82 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ndlocr-lite-mac-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0158B5A92F7548C10040B0B3 /* Sources */ = {
@@ -247,6 +298,7 @@
 		};
 		0158B5B92F7548C30040B0B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A16AA8BB77D5F79499D71321 /* Pods-ndlocr-lite-mac.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -279,6 +331,7 @@
 		};
 		0158B5BA2F7548C30040B0B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29839327B728BF63EF4A1E5F /* Pods-ndlocr-lite-mac.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
